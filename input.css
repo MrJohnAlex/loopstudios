@@ -33,3 +33,41 @@
     background-position: center;
   }
 }
+/* Hanburger Menu*/
+.hamburger {
+  cursor: pointer !important;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative !important;
+}
+.top,
+.middle,
+.bottom {
+  position: absolute;
+  width: 24px !important;
+  height: 2px !important;
+  top: 0;
+  left: 0;
+  background: #fff !important;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.middle {
+  transform: translateY(7px);
+}
+.bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+}
+.open .top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .middle {
+  display: none;
+}
+.open .bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
